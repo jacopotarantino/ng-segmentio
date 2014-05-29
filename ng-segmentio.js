@@ -33,18 +33,18 @@ angular.module('segmentio', ['ng'])
      * @param apiKey The key API to use
      */
     service.load = function(key) {
-      if ($document[0].getElementById('analytics-js')) return;
+      if ($rootScope.segmentioInjected !== true) {
+        // Create an async script element based on your key.
+        var script = $document[0].createElement('script');
+        script.async = true;
+        script.src = '//cdn.segment.io/analytics.js/v1/'
+          + key + '/analytics.min.js';
 
-      // Create an async script element based on your key.
-      var script = $document[0].createElement('script');
-      script.id = 'analytics-js';
-      script.async = true;
-      script.src = '//cdn.segment.io/analytics.js/v1/'
-        + key + '/analytics.min.js';
-
-      // Insert our script at the end of the body
-      $document[0].getElementsByTagName('body')[0]
-        .appendChild(script);
+        // Insert our script at the end of the body
+        $document[0].getElementsByTagName('body')[0]
+          .appendChild(script);
+        $rootScope.segmentioInjected = true;
+      }
     };
 
     // Add a version to keep track of what's in the wild.
