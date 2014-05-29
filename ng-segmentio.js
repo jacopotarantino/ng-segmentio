@@ -1,6 +1,7 @@
+'use strict';
+
 angular.module('segmentio', ['ng'])
-.factory('segmentio', ['$rootScope', '$document', '$window', '$location',
-  function($rootScope, $document, $window, $location) {
+  .factory('segmentio', function($rootScope, $document, $window, $location) {
     var service = {};
 
     $window.analytics = $window.analytics || [];
@@ -55,5 +56,4 @@ angular.module('segmentio', ['ng'])
     });
 
     return service;
-  }
-]);
+  });
