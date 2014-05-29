@@ -37,7 +37,6 @@ angular.module('segmentio', ['ng'])
 
       // Create an async script element based on your key.
       var script = document.createElement('script');
-      script.type = 'text/javascript';
       script.id = 'analytics-js';
       script.async = true;
       script.src = '//cdn.segment.io/analytics.js/v1/'
