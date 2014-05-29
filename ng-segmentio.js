@@ -1,6 +1,6 @@
 angular.module('segmentio', ['ng'])
-.factory('segmentio', ['$rootScope', '$window', '$location', '$log',
-  function($rootScope, $window, $location, $log) {
+.factory('segmentio', ['$rootScope', '$document', '$window', '$location', '$log',
+  function($rootScope, $document, $window, $location, $log) {
     var service = {};
 
     $window.analytics = $window.analytics || [];
@@ -33,18 +33,18 @@ angular.module('segmentio', ['ng'])
      * @param apiKey The key API to use
      */
     service.load = function(key) {
-      if (document.getElementById('analytics-js')) return;
+      if ($document[0].getElementById('analytics-js')) return;
 
       // Create an async script element based on your key.
-      var script = document.createElement('script');
+      var script = $document[0].createElement('script');
       script.id = 'analytics-js';
       script.async = true;
       script.src = '//cdn.segment.io/analytics.js/v1/'
         + key + '/analytics.min.js';
 
-      // Insert our script next to the first script element.
-      var first = document.getElementsByTagName('script')[0];
-      first.parentNode.insertBefore(script, first);
+      // Insert our script at the end of the body
+      $document[0].getElementsByTagName('body')[0]
+        .appendChild(script);
     };
 
     // Add a version to keep track of what's in the wild.
