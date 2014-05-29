@@ -40,9 +40,7 @@ angular.module('segmentio', ['ng'])
       script.type = 'text/javascript';
       script.id = 'analytics-js';
       script.async = true;
-      script.src = ('https:' === $location.protocol
-        ? 'https://' : 'http://')
-        + 'cdn.segment.io/analytics.js/v1/'
+      script.src = '//cdn.segment.io/analytics.js/v1/'
         + key + '/analytics.min.js';
 
       // Insert our script next to the first script element.
