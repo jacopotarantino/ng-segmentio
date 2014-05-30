@@ -1,4 +1,8 @@
 module.exports = function (grunt) {
+
+  // Load grunt tasks automatically
+  require('load-grunt-tasks')(grunt);
+
   // Project configuration.
   grunt.initConfig({
     pkg: '<json:package.json>',
@@ -33,10 +37,9 @@ module.exports = function (grunt) {
     }
   });
 
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-karma');
-
   // Default task.
-  grunt.registerTask('default', ['uglify']);
+  grunt.registerTask('default', [
+    'uglify',
+    'ngmin'
+  ]);
 };
