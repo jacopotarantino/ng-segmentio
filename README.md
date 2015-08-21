@@ -51,3 +51,9 @@ Run `bower install ng-segmentio` in a terminal
 ## Testing
 
 Run tests with `grunt test`. The test files are in the `test/unit` directory.
+
+## New in 2.0
+
+* Added Standard for JS style linting.
+* Switched to annotated angular dependencies.
+* Fixed a dep issue with the minified version.
