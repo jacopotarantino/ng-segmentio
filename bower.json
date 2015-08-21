@@ -1,12 +1,12 @@
 {
   "name": "ng-segmentio",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "main": "build/ng-segmentio.min.js",
   "dependencies": {
-      "angular": "~1.2.16"
+      "angular": "~1.4.3"
   },
   "devDependencies": {
-    "angular-mocks": "~1.2.16"
+    "angular-mocks": "~1.4.3"
   },
    "ignore": [
     "test/",
