@@ -8,6 +8,7 @@
     "grunt-karma": "~0.4.3",
     "grunt-ng-annotate": "^0.3.1",
     "grunt-nsp-shrinkwrap": "0.0.3",
+    "grunt-standard": "^1.0.2",
     "load-grunt-tasks": "~0.4.0",
     "time-grunt": "^0.4.0"
   },

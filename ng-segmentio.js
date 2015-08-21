@@ -1,9 +1,9 @@
 'use strict'
 
-angular.module('segmentio', ['ng']).factory(
-  'segmentio'
-  , ['$rootScope', '$window', '$location', '$log', '$q'
-    , function ($rootScope, $window, $location, $log, $q) {
+window.angular.module('segmentio', ['ng']).factory(
+  'segmentio',
+  ['$rootScope', '$window', '$location', '$log', '$q',
+    function ($rootScope, $window, $location, $log, $q) {
       var service = {}
 
       $window.analytics = $window.analytics || []

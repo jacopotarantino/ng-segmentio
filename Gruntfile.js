@@ -1,7 +1,6 @@
 module.exports = function (grunt) {
-
   // Load grunt tasks automatically
-  require('load-grunt-tasks')(grunt);
+  require('load-grunt-tasks')(grunt)
 
   // Project configuration.
   grunt.initConfig({
@@ -46,17 +45,29 @@ module.exports = function (grunt) {
           'build/ng-segmentio.min.js': [ 'ng-segmentio.js' ]
         }
       }
+    },
+
+    standard: {
+      options: {
+        format: true
+      },
+      app: {
+        src: [
+          'ng-segmentio.js'
+        ]
+      }
     }
-  });
+  })
 
   // Default task.
   grunt.registerTask('default', [
+    'standard',
     'ngAnnotate',
     'uglify'
-  ]);
+  ])
 
   grunt.registerTask('test', [
     'karma',
     'validate-shrinkwrap'
-  ]);
-};
+  ])
+}
