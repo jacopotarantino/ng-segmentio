@@ -46,7 +46,7 @@ angular.module('segmentio', ['ng'])
       script.type = 'text/javascript';
       script.id = 'analytics-js';
       script.async = true;
-      script.src = '//cdn.segment.io/analytics.js/v1/' + key + '/analytics.min.js';
+      script.src = ("https:" === $window.location.protocol ? "https://" : "http://") + 'cdn.segment.io/analytics.js/v1/' + key + '/analytics.min.js';
       script.onload = script.onreadystatechange = function () {
         deferred.resolve($window.analytics);
       };
