@@ -60,7 +60,7 @@ angular.module('segmentio', ['ng'])
   };
 
   // Add a version to keep track of what's in the wild.
-  $window.analytics.SNIPPET_VERSION = '2.0.9';
+  $window.analytics.SNIPPET_VERSION = '3.0.1';
 
   // Listening to $viewContentLoaded event to track pageview
   $rootScope.$watch(function() {
