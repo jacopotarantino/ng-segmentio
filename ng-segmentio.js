@@ -2,8 +2,8 @@
 
 window.angular.module('segmentio', ['ng']).factory(
   'segmentio',
-  ['$rootScope', '$window', '$location', '$log', '$q',
-    function ($rootScope, $window, $location, $log, $q) {
+  ['$rootScope', '$window', '$location', '$q',
+    function ($rootScope, $window, $location, $q) {
       var service = {}
 
       $window.analytics = $window.analytics || []
