@@ -2,7 +2,7 @@
 
 segmentio.$inject = ['$rootScope', '$window', '$location', '$log', '$q'];
 
-function segmentio($rootScope, $window, $location, $log, $q) {
+function segmentio($rootScope, $window, $location, $q) {
   var service = {};
 
   $window.analytics = $window.analytics || [];
