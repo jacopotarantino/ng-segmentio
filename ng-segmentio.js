@@ -24,7 +24,7 @@ window.angular.module('segmentio', ['ng']).factory(
       var methods = [
         'identify', 'group', 'track',
         'page', 'pageview', 'alias', 'ready', 'on', 'once', 'off',
-        'trackLink', 'trackForm', 'trackClick', 'trackSubmit'
+        'trackLink', 'trackForm', 'trackClick', 'trackSubmit', 'reset'
       ]
       for (var i = 0; i < methods.length; i++) {
         service[methods[i]] = methodFactory(methods[i])
