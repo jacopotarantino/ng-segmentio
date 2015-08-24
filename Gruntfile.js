@@ -8,23 +8,27 @@ module.exports = function (grunt) {
 
     watch: {
       karma: {
-        files: [ 'angular-segmentio.js', 'test/unit/*.js' ],
-        tasks: [ 'karma:unitBackground:run' ] // NOTE the :run flag
+        files: [ 'ng-segmentio.js', 'test/unit/*.js' ],
+        tasks: [ 'karma:unit:run' ] // NOTE the :run flag
       }
     },
 
     karma: {
       options: {
-        configFile: 'config/karma.conf.js',
-        browsers: [ 'Chrome' ]
+        browsers: [ 'PhantomJS' ],
+        frameworks: [ 'jasmine' ]
       },
 
       unit: {
-        singleRun: true
-      },
-
-      unitBackground: {
-        background: true
+        singleRun: true,
+        options: {
+          files: [
+            'bower_components/angular/angular.js',
+            'bower_components/angular-mocks/angular-mocks.js',
+            'ng-segmentio.js',
+            'test/unit/**/*.js'
+          ]
+        }
       }
     },
 
