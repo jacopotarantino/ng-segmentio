@@ -33,7 +33,7 @@ window.angular.module('segmentio', ['ng']).factory(
       /**
        * @description
        * Load Segment.io analytics script
-       * @param apiKey The key API to use
+       * @param key The key API to use
        */
       service.load = function (key) {
         var deferred = $q.defer()
