@@ -1,6 +1,6 @@
 {
   "name": "ng-segmentio",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "main": "build/ng-segmentio.min.js",
   "dependencies": {
       "angular": "~1.4.3"
